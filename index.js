@@ -3,7 +3,7 @@ import * as dotenv from "dotenv";
 
 // Configurações
 
-const prefix = "/";
+const prefix = "!";
 
 dotenv.config();
 
@@ -22,7 +22,7 @@ const client = new Client({
 client.on("ready", () => {
     console.log(`Bot inicializado`);
     client.user.setActivity
-    (`Como ser Bot em ${client.guilds.cache.size} ${client.guilds.cache.size > 1?"servidores":"servidor"}`);
+        (`Como ser Bot em ${client.guilds.cache.size} ${client.guilds.cache.size > 1 ? "servidores" : "servidor"}`);
 });
 
 client.on("messageCreate", async (message) => {
@@ -31,9 +31,12 @@ client.on("messageCreate", async (message) => {
 
     const { args, command } = parseCommand(message);
 
-    if (command === "ping") {
-        await message.channel.send(`pong`);
-        return;
+    // Comandos
+    switch (command) {
+        case "ping":
+            await message.channel.send(`pong`);
+            return;
+            break;
     }
 
 });
