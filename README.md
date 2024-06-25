@@ -1,6 +1,6 @@
 # COOKIE BOT 🍪
 
-Esse bot para discord, foi criado apenas para mim entender como funciona a criação de um bot do discord.
+Esse bot para discord, foi criado apenas para eu entender como funciona a criação de um bot do discord.
 
 A única coisa que ele faz é responder:
 
